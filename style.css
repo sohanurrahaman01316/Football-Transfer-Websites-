@@ -1,0 +1,564 @@
+/*------------------------------
+        common style start  
+--------------------------------*/
+body {
+  margin: 0;
+  
+}
+
+.My_container{
+    padding: 50px 100px;
+}
+
+/* google fonts poppins inter montserrarrt oswald */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&family=Oswald:wght@400;500&family=Poppins:ital,wght@0,500;1,300;1,400&family=Roboto:wght@400;500&display=swap');
+
+
+:root {
+    --primary-color: rgb(8, 1, 1);
+    --secondary-color: red;
+  }
+
+/*------------------------------
+        common style start  
+--------------------------------*/
+
+/*------------------------------
+          header start  
+--------------------------------*/
+
+.header {
+  background: var(--primary-color);
+  display: flex;
+  padding: 50px;
+  padding-bottom: 0px;
+  justify-content: space-evenly;
+  border-radius:20px;
+  overflow: hidden;
+}
+
+/* .header_for_flex {
+  width: 50%;
+} */
+
+
+
+@keyframes slidingright {
+    0%{margin-left: -200px;}
+    100%{margin-left: 0px;}
+    
+}
+
+
+
+@keyframes slidingrightText {
+    0%{margin-left: -200px;}
+    100%{margin-left: 0px;}
+    
+}
+
+.header_text h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif;
+  animation: slidingright .5s linear 1s 1 alternate;
+}
+.header_text p{
+    color: white;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    line-height: 30px;
+    animation: slidingrightText .5s linear 1s 1 alternate;
+    margin-bottom: 50px;
+}
+
+.common_button{
+    outline: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: transparent;
+    border: 1.5px solid var(--secondary-color);
+    color: white;
+    transition: all .3s ease-in-out;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+   
+    animation: buttonAnim .5s linear 1s 1;
+    
+}
+
+.common_button:hover{
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+
+@keyframes buttonAnim {
+    0%{
+        margin-left: -200px;
+        
+    } 
+    100%{margin-left: 0;};
+
+}
+
+.common_button i{
+    margin-left: 10px;
+    
+}
+
+
+.header_photo img {
+  width: 300px;
+  height: 500px;
+  animation: headerPhoto .5s linear 1s 1;
+}
+
+@keyframes headerPhoto {
+    0%{margin-right: -200px;}
+    100%{margin-right: 0px;}    
+}
+/*------------------------------
+          header end  
+--------------------------------*/
+
+
+
+/*------------------------------
+          blog start  
+--------------------------------*/
+
+.blog_container{
+    margin-top: 80px;
+}
+.blog_wrapper{
+    display: grid;
+    grid-template-columns: 362px 1fr 1fr 1fr;
+    grid-gap: 20px 20px;
+    grid-template-rows: repeat(4, auto);
+}
+
+.sidebar{
+    height: 242px;
+    width: 282px;
+    background: var(--primary-color);
+    padding:10px 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-row: 1 / -12;
+}
+
+.sidebar li{
+    list-style-type: none;
+    width: 100%;
+}
+
+.sidebar li a{
+    text-decoration: none;
+    color:black;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    transition: all .3s ease-in-out;
+    
+}
+
+.sidebar li a:hover{
+    background: var(--secondary-color);
+    color:white;
+}
+
+#blog_page_active{
+    background: var(--secondary-color);
+    color: white;
+}
+.blog{
+    
+   margin-left: 0px; 
+}
+
+.blog img{
+    width: 100%;
+    height: 175px;
+    display: block;
+}
+
+.blog_desc{
+    padding: 20px;
+}
+
+.blog_desc a{
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    padding: 5px 20px;
+    border-radius: 3px;
+    display: inline-block;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    transition: all .3s ease;
+    
+}
+
+.blog_desc a:hover{
+    background: var(--secondary-color);
+    color: white;
+    border: 1px solid var(--secondary-color);
+}
+
+.blog_desc h3{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.blog_desc span{
+    color: #424040;
+    font-family: 'Inter', sans-serif;
+    margin-right: 30px;
+
+}
+
+.blog_desc span i{
+    margin-right: 5px;
+}
+
+.view_all_button{
+    border: 2px solid var(--secondary-color);
+    display: block;
+    margin: 0 auto;
+    padding: 10px 40px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    display: none;
+}
+
+.view_all_button:hover{
+    background: var(--secondary-color);
+    color: white;
+}
+
+/*------------------------------
+          blog end  
+--------------------------------*/
+
+/*------------------------------
+          footer start  
+--------------------------------*/
+
+footer{
+    background: var(--primary-color);
+    padding: 20px;
+}
+
+footer h1{
+    text-align: center;
+    color: white;
+}
+
+footer hr{
+    border: .5px solid #080707;
+    width: 90%;
+}
+
+footer .footer_flex{
+    display: flex;
+    justify-content: center;
+}
+
+footer li{
+    list-style-type: none;
+    margin: 20px 20px;
+    /* text-align: center; */
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'Inter', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+footer li a:hover{
+    color: var(--secondary-color);
+}
+
+footer .footer_social{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_social i{
+    color: var(--secondary-color);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transition: all .3s ease-in-out;
+}
+
+.footer_social i:hover{
+    background: var(--secondary-color);
+    color: white;
+    border: 1px solid var(--secondary-color);
+}
+/*------------------------------
+          blog end  
+--------------------------------*/
+
+/* Media Query CSS Start here */
+
+@media screen and (max-width: 1250px){
+    .blog_wrapper{
+        grid-template-columns: 1fr 1fr 1fr;  
+              
+    }    
+
+    .sidebar{
+        flex-direction: row;
+        background-color: transparent;
+        width: 90%;
+        height:50px;
+        grid-column: 1 / -1;
+    }
+
+    .sidebar li a{
+       border: 1px solid rgb(197, 188, 188);
+
+    }
+
+    .sidebar li a:hover{
+        border:1px solid var(--secondary-color);
+ 
+     }
+
+}
+
+
+@media screen and (max-width: 1140px){
+    .header{
+        padding-bottom: 50px;
+    }    
+
+    .sidebar{
+        flex-direction: row;
+        background-color: transparent;
+        width: 90%;
+        height:50px;
+        grid-column: 1 / -1;
+    }
+
+    .sidebar li a{
+        border: .5px solid rgb(201, 193, 193);
+        border-radius: 8px;
+    }
+
+    .blog_wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }  
+
+    .view_all_button{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1040px){
+    .header_text h1{
+        font-size: 35px;
+    }   
+    
+    .header_photo img {
+        width: 300px;
+        height: 400px;
+      }
+
+      .blog_wrapper{
+        grid-template-columns: 1fr 1fr;
+        
+    }   
+}
+
+@media screen and (max-width: 850px){
+    .header_text p{
+        font-size: 14px;
+    }  
+
+    .header_photo img {
+        width: 200px;
+        height: 400px;
+      }
+      .all_container{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .all_container{
+        padding: 20px;
+    }
+    .header{
+        padding-bottom: 50px;
+    }   
+    
+    .header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header_photo img {
+       margin-top: 50px;
+      }
+
+      .header_text p{
+       margin-bottom: 25px;
+    }  
+
+    .sidebar li a{
+        font-size: 14px !important;
+    }
+
+    .footer_flex{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .blog_wrapper{
+        grid-template-columns:1fr;        
+    } 
+
+    .sidebar{
+        margin-top: -50px;
+        height: 250px;
+        flex-direction: column;
+    }
+
+    footer li a:hover{
+        color: var(--secondary-color);
+        margin-left: 5px;
+    }
+
+
+}
+
+/* Media Query CSS End  here */
+
+
+/* Upcoming CSS start here */
+#blog_page_active{
+    transition: all .3s ease-in-out;
+    background: white !important;
+    color: black !important;
+}
+
+#blog_page_active:hover{
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+.upcoming_blog_wrapper{
+    display: grid;
+    grid-template-columns: 362px 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.upcoming_blog{
+    border: 1px solid rgb(206, 202, 202);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.flag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag img, span{
+    margin: 0 5px;
+}
+
+.flag span{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.flag img{
+    width: 100%;
+}
+.upcoming_blog h3{
+    text-align: center;
+    margin: 15px 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.upcoming_blog small{
+    display: block;
+    text-align: center;
+    color: gray;
+}
+
+@media screen and (max-width:1350px){
+    .upcoming_blog_wrapper{
+        grid-template-columns: 362px 1fr 1fr;
+    } 
+
+    .sidebar li a{
+        border: 1px solid rgb(204, 194, 194);
+    }
+
+    .sidebar li a:hover{
+        border: 1px solid var(--secondary-color);
+    }
+ }
+
+ @media screen and (max-width: 1250px){
+    .upcoming_blog_wrapper{
+        grid-template-columns: 1fr 1fr 1fr;        
+    }    
+
+    .sidebar{
+        grid-row: 1 / 5;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 1040px){
+    .upcoming_blog_wrapper{
+        grid-template-columns: 1fr 1fr;        
+    } 
+}
+
+@media screen and (max-width: 600px){
+    .upcoming_blog_wrapper{
+        grid-template-columns:1fr;        
+    } 
+}
+
+/* Upcoming CSS end here here */
